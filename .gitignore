@@ -1,0 +1,20 @@
+# 依存パッケージ
+node_modules/
+
+# Netlify
+.netlify/
+
+# macOS
+.DS_Store
+Thumbs.db
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 環境変数
+.env
+.env.local
