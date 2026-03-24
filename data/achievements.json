@@ -1,0 +1,14 @@
+{
+  "score_ups": [
+    { "subject": "5教科合計", "before": 292, "after": 343 },
+    { "subject": "5教科合計", "before": 313, "after": 388 },
+    { "subject": "数学", "before": 14, "after": 50 },
+    { "subject": "5教科合計", "before": 278, "after": 418 },
+    { "subject": "5教科合計", "before": 362, "after": 437 },
+    { "subject": "5教科合計", "before": 242, "after": 366 }
+  ],
+  "pass_results": {
+    "public_schools": ["※実際の合格実績をお教えください"],
+    "private_schools": ["※実際の合格実績をお教えください"]
+  }
+}

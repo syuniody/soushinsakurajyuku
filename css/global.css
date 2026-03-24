@@ -7,42 +7,42 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap');
 
 :root {
-  /* === メインカラー（鮮やかなグリーン：パキッと信頼感） === */
-  --color-primary: #1A8C4E;
-  --color-primary-dark: #146B3A;
-  --color-primary-light: #DCEFD8;
+  /* === メインカラー（桜ピンク：温かみと信頼感） === */
+  --color-primary: #C85A7C;
+  --color-primary-dark: #A3465F;
+  --color-primary-light: #FDE8EF;
 
-  /* === アクセントカラー（鮮やかなオレンジ：CTAに最適） === */
-  --color-accent: #EF8B2C;
-  --color-accent-dark: #D47520;
-  --color-accent-light: #FFF0DE;
+  /* === アクセントカラー（和の深紅：CTAに映える） === */
+  --color-accent: #D4546A;
+  --color-accent-dark: #B8404F;
+  --color-accent-light: #FFF0F3;
 
-  /* === ベースカラー（クリーンな白ベース） === */
+  /* === ベースカラー（桜の花びらのような淡い背景） === */
   --color-white: #FFFFFF;
-  --color-bg: #FDFCF9;
-  --color-bg-alt: #F2EDE4;
-  --color-bg-primary: #DCEFD8;
+  --color-bg: #FFFBFC;
+  --color-bg-alt: #FFF5F7;
+  --color-bg-primary: #FDE8EF;
 
-  /* === テキストカラー（しっかり濃い、読みやすい） === */
-  --color-text: #2C2825;
-  --color-text-light: #6B6560;
-  --color-text-muted: #9A9490;
+  /* === テキストカラー（落ち着いた濃茶：読みやすい） === */
+  --color-text: #3D2B2E;
+  --color-text-light: #6B5558;
+  --color-text-muted: #9A8588;
 
   /* === 英語ラベル === */
-  --color-label: #1A8C4E;
+  --color-label: #C85A7C;
   --label-opacity: 0.10;
 
   /* === ボーダー・シャドウ === */
-  --color-border: #DDD7CE;
-  --color-shadow: rgba(44, 40, 37, 0.10);
+  --color-border: #EDD8DC;
+  --color-shadow: rgba(61, 43, 46, 0.10);
 
   /* === その他 === */
   --color-error: #D93025;
-  --color-success: #1A8C4E;
+  --color-success: #4CAF50;
   --color-star: #F0A500;
   --color-line: #06C755;
-  --color-accent-bg: rgba(239, 139, 44, 0.12);
-  --color-primary-bg: rgba(26, 140, 78, 0.10);
+  --color-accent-bg: rgba(212, 84, 106, 0.10);
+  --color-primary-bg: rgba(200, 90, 124, 0.08);
 
   /* === フォント（丸ゴシック） === */
   --font-family: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic Pro', 'Rounded Mplus 1c', sans-serif;
@@ -84,6 +84,12 @@ body {
   letter-spacing: 0.03em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- 桜の花びら背景装飾 --- */
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* --- フォーカススタイル（アクセシビリティ） --- */

@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+  repo: syuniody/soushinsakurajyuku
 
 media_folder: "images/blog"
 public_folder: "/images/blog"
@@ -23,3 +23,66 @@ collections:
       - { label: "アイキャッチ画像", name: "thumbnail", widget: "image", required: false }
       - { label: "概要", name: "description", widget: "text", required: false }
       - { label: "本文", name: "body", widget: "markdown" }
+
+  - name: "prices"
+    label: "授業料金"
+    files:
+      - name: "price_data"
+        label: "料金設定"
+        file: "data/prices.json"
+        fields:
+          - label: "料金テーブル"
+            name: "tables"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "テーブル見出し", name: "title", widget: "string", hint: "例: 小学生（60分）、中学生・高校生（90分）" }
+              - label: "料金行"
+                name: "rows"
+                widget: "list"
+                summary: "{{fields.grade}}"
+                fields:
+                  - { label: "学年", name: "grade", widget: "string", hint: "例: 小学生、中学1年生、高校生" }
+                  - { label: "週1回", name: "weekly1", widget: "string", hint: "例: ¥4,840" }
+                  - { label: "週2回", name: "weekly2", widget: "string", hint: "例: ¥9,680" }
+                  - { label: "週3回", name: "weekly3", widget: "string", hint: "例: ¥13,860" }
+                  - { label: "通い放題", name: "unlimited", widget: "string", hint: "例: ¥18,480" }
+          - label: "その他の費用"
+            name: "fees"
+            widget: "list"
+            summary: "{{fields.label}}: {{fields.value}}"
+            fields:
+              - { label: "項目名", name: "label", widget: "string", hint: "例: 管理費" }
+              - { label: "金額", name: "value", widget: "string", hint: "例: ¥2,200/月" }
+          - label: "備考"
+            name: "notes"
+            widget: "list"
+            field: { label: "備考", name: "note", widget: "string" }
+
+  - name: "achievements"
+    label: "合格実績・成績アップ"
+    files:
+      - name: "achievement_data"
+        label: "合格実績・成績アップ"
+        file: "data/achievements.json"
+        fields:
+          - label: "成績アップ実績"
+            name: "score_ups"
+            widget: "list"
+            summary: "{{fields.subject}} {{fields.before}}点→{{fields.after}}点"
+            fields:
+              - { label: "科目", name: "subject", widget: "string", hint: "例: 5教科合計、数学、英語" }
+              - { label: "変更前の点数", name: "before", widget: "number", value_type: "int", hint: "例: 292" }
+              - { label: "変更後の点数", name: "after", widget: "number", value_type: "int", hint: "例: 343" }
+          - label: "合格実績"
+            name: "pass_results"
+            widget: "object"
+            fields:
+              - label: "公立高校"
+                name: "public_schools"
+                widget: "list"
+                field: { label: "学校名", name: "school", widget: "string", hint: "例: 三木高校" }
+              - label: "私立高校"
+                name: "private_schools"
+                widget: "list"
+                field: { label: "学校名", name: "school", widget: "string", hint: "例: 滝川高校" }
