@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: main
-  repo: syuniody/soushinsakurajyuku
+  repo: "syuniody/soushinsakurajyuku"
   base_url: https://decap-oauth-proxy-navy.vercel.app
   auth_endpoint: /api/auth
 
