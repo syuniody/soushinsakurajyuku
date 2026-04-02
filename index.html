@@ -48,8 +48,6 @@
     "openingHours": ["Mo-Fr 16:00-22:00"]
   }
   </script>
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="has-header has-cta-bar">
 
@@ -58,13 +56,13 @@
     <div class="header__inner">
       <!-- ★差替え：ロゴ・塾名 -->
       <div class="header__logo">
-        <a href="/">
+        <a href="./">
           <img src="images/logo.svg" alt="個別指導 創新さくら塾" width="280" height="50">
         </a>
       </div>
       <!-- PC ナビゲーション -->
       <nav class="header__nav" aria-label="メインナビゲーション">
-        <a href="/" class="header__nav-link">ホーム</a>
+        <a href="./" class="header__nav-link">ホーム</a>
         <a href="courses/" class="header__nav-link">コース・料金</a>
         <a href="teachers/" class="header__nav-link">講師紹介</a>
         <a href="access/" class="header__nav-link">教室案内</a>
@@ -91,7 +89,7 @@
 
   <!-- モバイルメニュー -->
   <nav class="mobile-menu" aria-label="モバイルナビゲーション">
-    <a href="/" class="mobile-menu__link">ホーム</a>
+    <a href="./" class="mobile-menu__link">ホーム</a>
     <a href="courses/" class="mobile-menu__link">コース・料金</a>
     <a href="teachers/" class="mobile-menu__link">講師紹介</a>
     <a href="access/" class="mobile-menu__link">教室案内</a>
@@ -634,7 +632,7 @@
       <div>
         <p class="footer__nav-title">ページ</p>
         <ul class="footer__nav-list">
-          <li><a href="/">ホーム</a></li>
+          <li><a href="./">ホーム</a></li>
           <li><a href="courses/">コース・料金</a></li>
           <li><a href="teachers/">講師紹介</a></li>
           <li><a href="access/">教室案内</a></li>
@@ -685,13 +683,5 @@
   <script src="js/main.js"></script>
   <script src="js/cms-data.js"></script>
   <script src="js/sakura-petals.js"></script>
-  <!-- Netlify Identity redirect -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", function(user) {
-        if (!user) { window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; }); }
-      });
-    }
-  </script>
 </body>
 </html>
