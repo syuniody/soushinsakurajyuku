@@ -2,8 +2,8 @@ backend:
   name: github
   branch: main
   repo: syuniody/soushinsakurajyuku
-  base_url: https://decap-oauth-proxy-navy.vercel.app
-  auth_endpoint: /auth
+  auth_type: pkce
+  app_id: Ov23liiodauWB2tTwMuu
 
 media_folder: "images/blog"
 public_folder: "/images/blog"
